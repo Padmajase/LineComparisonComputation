@@ -1,7 +1,8 @@
 import java.util.Scanner;
 import java.lang.Math;
+import java.lang.Float;
 
-class LineComparisonComputation {
+class UC3 {
 	public static void main (String args[]) {
 		System.out.println("Welcome !");
 		
@@ -23,12 +24,18 @@ class LineComparisonComputation {
 
 		double lengthofSecondLine = Math.sqrt( Math.pow((p2 - p1), 2) + Math.pow( (q2 - q1), 2));
 		System.out.println(lengthofSecondLine);
-
-		if(lengthofFirstLine == lengthofSecondLine)
+		
+		int compare = lengthofFirstLine.compareTo(lengthofSecondLine);
+		if(compare == 0)
 		{
 			System.out.println("Both Line1 and Line2 are equal in length");
 		}
+		else if(compare > 0)
+		{
+			System.out.println("Both Line1 is Greater than Line2 ");
+		}
 		else
-			System.out.println("Both Line1 and Line2 are not equal in length");
+			System.out.println("Both Line1 is Lesser than Line2 ");
+
 	}
 }
